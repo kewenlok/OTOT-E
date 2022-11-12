@@ -10,7 +10,7 @@ A redis server is hosted only on local machine and not on Google cloud as it is 
 
 # Caching
 
-To test caching mechanism, you can go to `http://localhost:3000/api/task/all` and measure the time taken for server to return the task information to the browser. Then, refresh the page again and you will notice that it takes much lesser time. You can clear the cache by sending a get request to `http://localhost:3000/api//delete/cache/task`.
+To test caching mechanism, you can go to `http://localhost:3000/api/task/all` and measure the time taken for server to return the task information to the browser. Then, refresh the page again and you will notice that it takes much lesser time. You can clear the cache by sending a get request to `http://localhost:3000/api/delete/cache/task`.
 
 # Importing mock data
 
