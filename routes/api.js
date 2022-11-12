@@ -1,6 +1,6 @@
 // Initialize express router
 const router = require('express').Router();
-const { retrieveAllTasks, addTask, deleteTask, updateTask, deleteTaskCache } = require('../controllers/task');
+const { retrieveAllTasks, deleteTaskCache } = require('../controllers/task');
 
 router.route('/task/all').get(retrieveAllTasks);
 
