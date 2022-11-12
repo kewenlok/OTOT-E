@@ -1,0 +1,24 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: kewen123/cs3219-otot-e
+    depends_on:
+      - mongo
+      - redis
+    ports:
+      - "8081:8081"
+    environment:
+      - API_PORT=8081
+      - MONGO_URI=mongodb://mongo:27017
+      - REDIS_URI=redis://redis:6379
+  mongo:
+    image: mongo:4.2.23-rc1
+    volumes:
+      - mongovolume:/data/db
+      - ${PWD}:/app
+  redis:
+    image: redis:7.0.5
+
+volumes:
+  mongovolume:
